@@ -49,7 +49,7 @@ function createHTTPSConfig() {
               },
               {
                 type: 2,
-                value: "localhost"
+                value: "157.230.41.69"
               }
             ]
           }
@@ -68,7 +68,7 @@ function createHTTPSConfig() {
   }
 }
 
-const defaultHostName = "localhost";
+const defaultHostName = "157.230.41.69";
 const host = process.env.HOST_IP || defaultHostName;
 const port = process.env.HOST_PORT || 9090;
 const internalHostname = process.env.INTERNAL_HOSTNAME || defaultHostName;
@@ -95,7 +95,7 @@ module.exports = env => {
       },
       before: function(app) {
         // be flexible with people accessing via a local reticulum on another port
-        app.use(cors({ origin: /hubs\.local(:\d*)?$/ }));
+        app.use(cors({ origin: /157.230.41.69(:\d*)?$/ }));
       }
     },
 
