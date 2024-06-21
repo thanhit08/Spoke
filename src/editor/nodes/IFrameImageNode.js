@@ -147,6 +147,8 @@ export default class IFrameImageNode extends EditorNodeMixin(Mesh) {
         //     components.link = { href: this.href };
         // }
 
+        components.link = null;
+
         return super.serialize(components);
     }
 
